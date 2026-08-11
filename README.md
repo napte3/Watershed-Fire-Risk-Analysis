@@ -8,7 +8,6 @@ In this project, I analyzed the fire risk posed to the 11 watersheds in Orange C
 San Juan Creek, San Mateo, Laguna Coast and Santa Ana River watersheds overlapped the most with buffers and had the highest percentage of area burned by fires. 
 Anaheim Bay and Coyote Creek watersheds overlapped the least with the buffers and this was validated by the fact that there were very few, if any, historical wildfires.
 <img width="552" height="534" alt="image" src="https://github.com/user-attachments/assets/0751f383-42cd-4413-9294-74d3cd78c9d3" />
-<img width="577" height="432" alt="image" src="https://github.com/user-attachments/assets/13201bc2-ad3c-4f38-94a3-c0de73188a86" />
 
 ### Data Sources
 - Fire Hazard Severity Zones: https://purl.stanford.edu/qn729yz0686 
