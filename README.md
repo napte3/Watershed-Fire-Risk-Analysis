@@ -4,11 +4,15 @@
 A watershed is a geographic area where all the rain and runoff drains downhill into a body of water like an ocean or a river. Watersheds are very important because they recharge local drinking water when rain seeps into underground aquifers. They protect coastal wetlands by slowing runoff and preventing erosion. Southern California has experienced increasingly frequent and severe wildfires in recent decades. The erosion that results from the loss of vegetation causes flooding and mudslides among other negative effects. 
 In this project, I analyzed the fire risk posed to the 11 watersheds in Orange County, California by measuring how much of each watershed overlaps CAL FIRE's 'Very High' Fire Hazard Severity Zones. I also used CAL FIRE's historical fire perimeter dataset to validate this by measuring the percent of area burned by fires that occurred in each watershed. 
 
-### Process and Key Findings
+### Process
 CAL FIRE's Fire Hazard Severity Zones is a predictive model that assigns a hazard score based on the factors that influence fire likelihood and fire behavior. This analysis tests whether this model holds up against 90+ years of historical fire data by adding three buffer rings at distances of 800m, 1600m, and 2400m around each 'Very High Hazard Zone'. The California Fire Alliance states that 2400m (2.4km) is the statistical threshold that firebrands can travel from a wildland fire front. It is a WUI planning threshold designed to capture the majority of realistic fire risk, excluding extreme outlier events. 
 I use the Spearman's rank correlation coefficient to evaluate the strength and direction between the percent of watershed in buffer and the percent of fire in each watershed. I ran this test with all 11 watersheds and separately with only 9 (excluding the outliers mentioned below). 
-The test statistic was 0.909 and the p-value was 0.000105. A coefficient of ~0.9 indicates that there is a very strong, positive monotonic relationship between the two variables. A p-value of ~0.0001 indicates that it is very unlikely that this relationship is due to random chance. 
+
+### Statistical validation and Results
+The test with all 11 watersheds yielded rho = 0.909 and p-value = 0.000105. Excluding the two outliers, the results changed minimally (rho = 0.9, p-value = 0.00094), indicating that these outliers do not sway the overall result. A coefficient of ~0.9 shows that there is a very strong, positive monotonic relationship between the two variables. A p-value of ~0.0001 indicates that it is very unlikely that this relationship is due to random chance. 
 The San Juan Creek, San Mateo, Laguna Coast and Santa Ana River watersheds overlapped the most with buffers and had the highest percentage of area burned by fires. Anaheim Bay and Coyote Creek watersheds overlapped the least with the buffers and this was validated by the fact that there were very few, if any, historical wildfires. The Laguna Coast watershed is a slight outlier due to its small size; It is 100% contained in a buffer, although this doesn't necessarily mean it is the watershed most at risk. Dana Point is also another outlier due to its small size and proximity to a neighboring high-hazard watershed, which inflates its buffer percent despite it having almost no historical fire activity.
+
+### Visualizations
 
 <img width="2172" height="1344" alt="image" src="https://github.com/user-attachments/assets/8935c291-5b66-4925-9dbe-e1d49a6336ad" />
 
